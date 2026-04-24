@@ -1,0 +1,14 @@
+node_modules
+.turbo
+dist
+coverage
+.DS_Store
+.venv
+__pycache__
+.pytest_cache
+*.pyc
+*.egg-info
+.env
+.env.*
+!.env.example
+*.tsbuildinfo

@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/fixtures" },
+    { "path": "./packages/providers" },
+    { "path": "./packages/workflows" },
+    { "path": "./apps/mcp-server" },
+    { "path": "./apps/demo-web" }
+  ]
+}
+

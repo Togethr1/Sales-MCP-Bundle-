@@ -1,0 +1,22 @@
+{
+  "name": "sales-mcp-bundle",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.7.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "dev:demo-stack": "node scripts/dev-demo-stack.mjs",
+    "dev:intelligence": "python3 -m uvicorn intelligence.app:app --app-dir python/intelligence/src --host 127.0.0.1 --port 8000 --reload",
+    "lint": "turbo run lint",
+    "test": "vitest run",
+    "typecheck": "turbo run typecheck",
+    "demo:account-status": "pnpm --filter @sales-mcp/mcp-server demo:account-status"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "turbo": "^2.0.12",
+    "typescript": "^5.7.3",
+    "vitest": "^3.2.4"
+  }
+}
