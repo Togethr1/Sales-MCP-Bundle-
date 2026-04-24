@@ -1,0 +1,233 @@
+:root {
+  color-scheme: light;
+  font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(204, 85, 32, 0.16), transparent 35%),
+    linear-gradient(180deg, #f4ecdf 0%, #f7f5ef 100%);
+  color: #17202a;
+}
+
+body {
+  margin: 0;
+}
+
+.shell {
+  min-height: 100vh;
+  padding: 32px 18px 48px;
+}
+
+.topbar,
+.workspace {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.topbar {
+  display: grid;
+  gap: 20px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 4.3rem);
+  line-height: 0.96;
+}
+
+.eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8d3a0b;
+  font-size: 0.75rem;
+}
+
+.command-bar {
+  display: grid;
+  gap: 8px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(255, 251, 244, 0.84);
+  border: 1px solid rgba(141, 58, 11, 0.14);
+  box-shadow: 0 20px 40px rgba(85, 49, 29, 0.06);
+}
+
+.command-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #7a604f;
+}
+
+.command-input {
+  border: 0;
+  background: transparent;
+  font-size: 1.05rem;
+  color: #17202a;
+}
+
+.workspace {
+  display: grid;
+  gap: 20px;
+}
+
+.sidebar {
+  display: grid;
+  gap: 16px;
+}
+
+.main-column {
+  display: grid;
+  gap: 18px;
+}
+
+.side-panel,
+.workspace-card {
+  background: rgba(255, 252, 246, 0.9);
+  border: 1px solid rgba(141, 58, 11, 0.12);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 24px 48px rgba(85, 49, 29, 0.08);
+}
+
+.side-panel h2,
+.workspace-card h3,
+.workspace-card h4 {
+  margin-top: 0;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, rgba(141, 58, 11, 0.1), rgba(204, 85, 32, 0.06));
+}
+
+.hero-card h2 {
+  margin: 0 0 10px;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+}
+
+.summary-grid,
+.subgrid,
+.signal-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.action-list {
+  display: grid;
+  gap: 10px;
+}
+
+.action-button {
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(141, 58, 11, 0.12);
+  background: rgba(255, 255, 255, 0.65);
+  color: #17202a;
+  font: inherit;
+  cursor: pointer;
+}
+
+.action-button.active {
+  background: #8d3a0b;
+  color: #fff7ef;
+  border-color: #8d3a0b;
+}
+
+.main-panel {
+  min-height: 420px;
+}
+
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.meta,
+.meta-block {
+  color: #6e5849;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.text-surface {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  margin: 0;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(247, 242, 233, 0.92);
+  border: 1px solid rgba(141, 58, 11, 0.1);
+  font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: #cc5520;
+  box-shadow: 0 0 0 4px rgba(204, 85, 32, 0.16);
+}
+
+.timeline-head,
+.signal-label {
+  margin: 0 0 6px;
+  color: #8d3a0b;
+  text-transform: capitalize;
+}
+
+.signal-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.signal-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(247, 242, 233, 0.92);
+  border: 1px solid rgba(141, 58, 11, 0.1);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(141, 58, 11, 0.08);
+  border: 1px solid rgba(141, 58, 11, 0.12);
+  text-transform: capitalize;
+}
+
+@media (min-width: 980px) {
+  .topbar {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .workspace {
+    grid-template-columns: 300px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .subgrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
